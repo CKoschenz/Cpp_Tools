@@ -1,7 +1,7 @@
-#include <projectname/greeting/greeting.hpp>
-#include <projectname/factorial/factorial.hpp>
-#include <projectname/io/io.hpp>
-#include <projectname/parser/parser.hpp>
+#include <tools/greeting/greeting.hpp>
+#include <tools/factorial/factorial.hpp>
+#include <tools/io/io.hpp>
+#include <tools/parser/parser.hpp>
 
 #include <iostream>
 

@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <vanderwaals/utils/utils.hpp>
+#include <tools/utils/utils.hpp>
 
 TEST(Utils, Min_of) {
   // Expect two strings not to be equal.

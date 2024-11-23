@@ -1,4 +1,4 @@
-#include <projectname/factorial/factorial.hpp>
+#include <tools/factorial/factorial.hpp>
 
 long int factorial(int n) {
     if (n>=1)

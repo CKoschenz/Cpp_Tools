@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include <projectname/factorial/factorial.hpp>
+#include <tools/factorial/factorial.hpp>
 
 TEST(HelloTest, BasicAssertions) {
   // Expect two strings not to be equal.

@@ -2,7 +2,7 @@
 #include <cmath>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <vanderwaals/utils/indexer.hpp>
+#include <tools/utils/indexer.hpp>
 
 /**
  * @brief Test indexer

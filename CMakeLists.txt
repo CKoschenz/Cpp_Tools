@@ -8,6 +8,8 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 enable_testing()
 
 find_package(GTest REQUIRED)
+find_package(GSL REQUIRED)
+find_package(blaze REQUIRED)
 find_package(NLopt)
 find_package(SWIG)
 find_package(nlohmann_json)
@@ -30,5 +32,4 @@ configure_file(
     ${PROJECT_SOURCE_DIR}/tools/utils/CMAKE_config.h
 )
 
-
-add_subdirectory(projectname)
+add_subdirectory(tools)

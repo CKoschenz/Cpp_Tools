@@ -2,7 +2,7 @@
 #include <cmath>
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <vanderwaals/utils/range.hpp>
+#include <tools/utils/range.hpp>
 
 /**
  * @brief Test integer range
