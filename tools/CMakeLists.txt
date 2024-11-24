@@ -2,6 +2,7 @@ add_executable(tools.x main.cpp)
 
 include_directories(${PROJECT_SOURCE_DIR})
 
+add_subdirectory(dependency_injection)
 add_subdirectory(io)
 add_subdirectory(factorial)
 add_subdirectory(greeting)
