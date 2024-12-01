@@ -2,6 +2,4 @@
 
 #include <iostream>
 
-void print(const int value) {
-  std::cout << value << std::endl;
-}
+void print(const int value) { std::cout << value << std::endl; }

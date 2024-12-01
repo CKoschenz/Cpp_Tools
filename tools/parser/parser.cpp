@@ -1,6 +1,5 @@
-#include <parser.hpp>
-
 #include <cassert>
+#include <parser.hpp>
 #include <string>
 
 int parse_arguments(int argc, char *argv[]) {

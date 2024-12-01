@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+
 #include <tools/utils/utils.hpp>
 
 TEST(Utils, Min_of) {

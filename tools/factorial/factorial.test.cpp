@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+
 #include <tools/factorial/factorial.hpp>
 
 TEST(HelloTest, BasicAssertions) {
@@ -14,9 +15,7 @@ TEST(HelloTest, FactorialTest) {
 }
 
 // Tests factorial of 0.
-TEST(FactorialTest, HandlesZeroInput) {
-  EXPECT_EQ(factorial(0), 1);
-}
+TEST(FactorialTest, HandlesZeroInput) { EXPECT_EQ(factorial(0), 1); }
 
 // Tests factorial of positive numbers.
 TEST(FactorialTest, HandlesPositiveInput) {

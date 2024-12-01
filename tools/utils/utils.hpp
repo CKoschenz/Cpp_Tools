@@ -37,35 +37,32 @@
 #define DEBUGLEVEL 0
 
 #if DEBUGLEVEL < 1
-  #define ASSERT(x)
+#define ASSERT(x)
 #else
-  #define ASSERT(x) \
-  if(! (x)) \
-  { \
+#define ASSERT(x)                                                  \
+  if (!(x)) {                                                      \
     cout << "Fehler. Annahme " << #x << " ist nicht zutreffend\n"; \
-    cout << " in Zeile " << __LINE__ << "\n"; \
-    cout << " in Datei " << __FILE__ << "\n"; \
+    cout << " in Zeile " << __LINE__ << "\n";                      \
+    cout << " in Datei " << __FILE__ << "\n";                      \
   }
 #endif
 
 #if DEBUGLEVEL < 2
-  #define EVAL(x)
+#define EVAL(x)
 #else
-  #define EVAL(x) \
-    cout << #x << ":\t" << x << endl;
+#define EVAL(x) cout << #x << ":\t" << x << endl;
 #endif
 
 #if DEBUGLEVEL < 3
-  #define PRINT(x)
+#define PRINT(x)
 #else
-  #define PRINT(x) \
-    cout << x << endl;
+#define PRINT(x) cout << x << endl;
 #endif
 
 #endif
 
 // ++++ Namensraum ++++
-//using namespace std;
+// using namespace std;
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // + Libraries
@@ -74,16 +71,16 @@
 #include <complex>
 #include <ctime>
 #include <fstream>
+#include <iomanip>  // setprecision()
 #include <iostream>
-#include <iomanip>	// setprecision()
 #include <limits>
 #include <ostream>
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <string.h>
-#include <vector>	//Standard-Vektoren
-#include <sstream>	//stellt u.a. ostringstream bereit
-#include <typeinfo> //typeid(T)
+#include <sstream>   //stellt u.a. ostringstream bereit
+#include <typeinfo>  //typeid(T)
+#include <vector>    //Standard-Vektoren
 
 #include "CMAKE_config.h"
 
@@ -121,30 +118,32 @@ void ExitWithError(const std::string &error);
 // threshold = 1e-6
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-double minimal_value( double X, double Y);
+double minimal_value(double X, double Y);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // + Color Modifier
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-class Modifier
-{
-    size_t code_FG;
-    size_t code_BG;
-    size_t code_FONT;
-  public:
-    Modifier();
-    Modifier(size_t pCode_FG);
-    Modifier(size_t pCode_FG, size_t pCode_BG, size_t pCode_FONT);
-    friend std::ostream& operator<<(std::ostream& os, const Modifier& mod);
+class Modifier {
+  size_t code_FG;
+  size_t code_BG;
+  size_t code_FONT;
+
+ public:
+  Modifier();
+  Modifier(size_t pCode_FG);
+  Modifier(size_t pCode_FG, size_t pCode_BG, size_t pCode_FONT);
+  friend std::ostream &operator<<(std::ostream &os, const Modifier &mod);
 };
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // + Template Type to String / String to Type
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-template <typename T> std::string T_to_string(const T &val);
-template <typename T> T string_to_T(const std::string &val);
+template <typename T>
+std::string T_to_string(const T &val);
+template <typename T>
+T string_to_T(const std::string &val);
 bool string_to_T(const std::string &val);
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -162,15 +161,17 @@ const std::string currentDateTimeStamp();
 //
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-template<class T>
-typename std::enable_if<!std::numeric_limits<T>::is_integer, bool>::type atleast_almost_equal(T x, T y);
+template <class T>
+typename std::enable_if<!std::numeric_limits<T>::is_integer, bool>::type
+atleast_almost_equal(T x, T y);
 
-template<class T>
-typename std::enable_if<std::numeric_limits<T>::is_integer, bool>::type atleast_almost_equal(T x, T y);
+template <class T>
+typename std::enable_if<std::numeric_limits<T>::is_integer, bool>::type
+atleast_almost_equal(T x, T y);
 
 /**
  * @brief Print numerical limits
- * 
+ *
  */
 void show_numerical_limits();
 

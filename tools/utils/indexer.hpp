@@ -33,14 +33,14 @@
 #include <numeric>
 #include <vector>
 
-namespace op{
-  class Indexer {
-    public:
-      Indexer(std::initializer_list<size_t> il);
-      size_t operator()(std::initializer_list<size_t> args);
+namespace op {
+class Indexer {
+ public:
+  Indexer(std::initializer_list<size_t> il);
+  size_t operator()(std::initializer_list<size_t> args);
 
-    private:
-      std::vector<size_t> factors;
-  };
-}
+ private:
+  std::vector<size_t> factors;
+};
+}  // namespace op
 #endif
