@@ -5,16 +5,17 @@ project(Cpp_Tools LANGUAGES CXX)
 set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 
-enable_testing()
-
-find_package(GTest REQUIRED)
-find_package(GSL REQUIRED)
+find_package(Boost REQUIRED)
 find_package(blaze REQUIRED)
+find_package(GSL REQUIRED)
+find_package(GTest REQUIRED)
+find_package(nlohmann_json)
 find_package(NLopt)
 find_package(SWIG)
-find_package(nlohmann_json)
 
 include(GoogleTest)
+
+enable_testing()
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS OFF)
