@@ -6,6 +6,7 @@ add_subdirectory(dependency_injection)
 add_subdirectory(io)
 add_subdirectory(factorial)
 add_subdirectory(greeting)
+add_subdirectory(hash)
 add_subdirectory(parser)
 add_subdirectory(utils)
 
